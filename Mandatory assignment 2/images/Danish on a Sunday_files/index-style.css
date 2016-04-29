@@ -1,0 +1,12 @@
+#pictures {
+  position:relative;
+}
+
+#menuLine {
+  position:relative;
+  margin: -10px 0 0 0;
+  padding:0;
+}
+#menuLine li a:hover {
+  color: #CB2B2B;
+}

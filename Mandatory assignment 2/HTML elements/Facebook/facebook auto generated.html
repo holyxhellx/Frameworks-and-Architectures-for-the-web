@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W#C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="da" xmlns="http://www.w3.org/1999/xhhtml" xml:lang="da">
+<head>
+    <title>Danish on a Sunday</title>
+    <!-- Issue: firefox The character encoding of the HTML document was not declared."
+    -   Solution: <meta charset="utf-8"/>
+    -   source: https://github.com/webpack/webpack-dev-server/issues/1 -->
+    <meta charset="utf-8"/>
+
+    <!-- jQuery script useable -->
+    <script src="jquery.js"></script>
+
+</head>
+<body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/da_DK/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="http://www.dfi.dk/Filmhuset/Cinemateket/Billetter-og-program/Serie.aspx?serieID=11933" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+body {  
+  background-color: lightgray; 	
+}
+
+/* padding/border/margin lagout syntax;
+    padding:10px 5px 15px 20px;
+        top padding is 10px
+        right padding is 5px
+        bottom padding is 15px
+        left padding is 20px
+
+    padding:10px 5px 15px;
+        top padding is 10px
+        right and left padding are 5px
+        bottom padding is 15px
+
+    padding:10px 5px;
+        top and bottom padding are 10px
+        right and left padding are 5px
+
+    padding:10px;
+        all four paddings are 10px
+*/
+
+/* 
+*   Header layout 
+*/
+#container {   
+  position:relative;
+    top:0px;
+    left:0px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:left;
+	width: 1024px;
+  height: 768px;
+  background-color: white;
+}
+#header {  
+  position:absolute;
+     top:0px;
+     left:0px;
+	width: 100%;
+	height:110px;
+}
+#logo img{   
+  position:absolute;
+    top: 5px;
+    left:0px;
+  text-align:left;
+	margin:0px 10px;
+}
+#sitebranding img {
+  width: 100%;
+  height: 100%;
+}
+
+/*
+*    Social: Twitter & Facebook
+*/
+#social {
+  position:absolute;
+   top: 88px;
+   left:0px;
+  width: 100%;
+  height: 100%;
+}
+
+#social ul {
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#social li {
+  float: right;
+
+}
+  #facebook {
+    position:relative;
+    /* This is done instead of calling a Jquery to .remove(span id:u_0_2 & id:u_0_3) */
+    margin-right: -70px;
+    display: inline-block;
+    /* shrink element to 60% of origin */
+    -webkit-transform:scale(0.7);
+    -moz-transform:scale(0.7);
+    -ms-transform:scale(0.7);
+    transform:scale(0.7);
+
+  }
+  #twitter {
+    position:relative;
+    /* This is done instead of calling Jquery to .remove(span "same method as facebook") */
+    margin-right: -87px;
+    display: inline-block;
+    /* shrink element to 60% of origin */
+    -webkit-transform:scale(0.7);
+    -moz-transform:scale(0.7);
+    -ms-transform:scale(0.7);
+    transform:scale(0.7);
+  }
+
+/* 
+*    The header top-menu-bar 
+*/
+#headerMenu {
+  position:absolute;
+   top: 5px;
+   left:0px;
+  width: 100%;
+  height: 100%;
+}
+  #headerMenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+    font-family: "Verdana";
+    /* font-size:; 1em = 12pt = 16px = 100% */
+    font-size: 12px;
+  }
+  #headerMenu li {
+      float: right;
+      background-color: #111;
+  }
+  #headerMenu li a {   
+      display: block;
+      height: 10px;
+      color: white;
+      text-align: center;
+      padding: 2px 5px 8px;
+      text-decoration: none;
+  }
+  /* Flag image */
+  #headerMenu li a img {
+    margin-bottom: 0px;
+    margin-right: 3px;
+  }
+  /* Magnif. image */
+  #headerMenu li button img {
+      margin-right: 1px;
+      margin-top: 1px;
+      text-align: center;
+  }
+  /* Change the link color-text to darkred on hover */
+  #headerMenu li a:hover {
+      /*background-color: #444; */
+      color: darkred;
+  }
+  /*
+  *   The menu border-left end:
+  */
+  #end {
+      border-top: 10px solid black;
+      border-left: 10px solid white;
+      border-bottom: 10px solid black;
+      border-left: 10px solid white;
+      background-color: white;
+  }
+  /*  
+  *  Search input-field
+  */
+  #header-search, button {
+      border:1px solid #E8E8E8;
+      background-color:#E8E8E8;
+      height:30px;
+      padding: 0px;
+      color:#4a4a4a;
+      float: left;
+      font-size: 9px;
+      height: 16px;
+      margin-top: 2px;
+      margin-bottom: 2px;
+  }
+  #header-search {
+      -webkit-border-radius: 0 5px 5px 0;
+      -moz-border-radius: 0 5px 5px 0;
+      border-radius: 0 5px 5px 0;
+      margin-right: 5px;
+      width: 90px;
+  }
+  #headerMenu button {
+      -webkit-border-radius: 5px 0 0 5px;
+      -moz-border-radius: 5px 0 0 5px;
+      border-radius: 5px 0 0 5px;
+  }
+/*
+*   Main - menubar
+*/
+
+#menuLine {
+  position:relative;
+   top: 2px;
+   left:0px;
+  width: 100%;
+  height: 100%;
+}
+  #menuLine ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #111;
+    font-family: "Verdana";
+    /* font-size:; 1em = 12pt = 16px = 100% */
+    font-size: 12px;
+  }
+  #menuLine li {
+    float: left;
+  }
+  #menuLine li a { 
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;  
+    padding: 2px 46px 5px 49px;
+  }
+  #menuLine li a:hover {
+    /* Change the link color-text to darkred on hover */
+    color: darkred;
+  } 
+

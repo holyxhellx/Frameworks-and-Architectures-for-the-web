@@ -1,0 +1,433 @@
+body {  
+  background-color: lightgray;  
+}
+
+/* padding/border/margin lagout syntax;
+    padding:10px 5px 15px 20px;
+        top padding is 10px
+        right padding is 5px
+        bottom padding is 15px
+        left padding is 20px
+
+    padding:10px 5px 15px;
+        top padding is 10px
+        right and left padding are 5px
+        bottom padding is 15px
+
+    padding:10px 5px;
+        top and bottom padding are 10px
+        right and left padding are 5px
+
+    padding:10px;
+        all four paddings are 10px
+*/
+
+/* 
+*   Overall layout 
+*/
+#container {   
+  position:relative;
+    top:0px;
+    left:0px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:left;
+  width: 648px;
+  height: 768px;
+  background-color: white;
+  overflow: hidden;
+}
+
+/*
+*   Header layout
+*/
+#page {  
+  position:absolute;
+     top:0px;
+     left:0px;
+  width: 100%;
+  height:110px;
+}
+
+#banner {
+    position:relative;
+    margin-right: -400px;
+    display: inline-block;
+
+}
+
+#logo img{   
+  position:absolute;
+    top: 5px;
+    left:0px;
+  text-align:left;
+  margin:0px 10px;
+}
+#sitebranding img {
+  width: 1024px;
+  height: 100%;
+}
+
+/*
+*    Social: Twitter & Facebook
+*/
+#social {
+  display: none;
+  position:absolute;
+   top: 82%;
+   left:0;
+  width: 100%;
+  height: 0;
+}
+
+#social ul {
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#social li {
+  float: right;
+
+}
+  #facebook {
+    position:relative;
+    /* This is done instead of calling a Jquery to .remove(span id:u_0_2 & id:u_0_3) */
+    margin-right: -70px;
+    display: inline-block;
+    /* shrink element to 70% of original */
+    -webkit-transform:scale(0.7);
+    -moz-transform:scale(0.7);
+    -ms-transform:scale(0.7);
+    transform:scale(0.7);
+
+  }
+  #twitter {
+    position:relative;
+    /* This is done instead of calling Jquery to .remove(span "same method as facebook") */
+    margin-right: -87px;
+    display: inline-block;
+    /* shrink element to 70% of original */
+    -webkit-transform:scale(0.7);
+    -moz-transform:scale(0.7);
+    -ms-transform:scale(0.7);
+    transform:scale(0.7);
+  }
+
+/* 
+*    Horizontal Menu top-right 
+*    Both Desktop and Mobile Menu
+*/
+
+#menuLine-mobile {
+  display: inline; /* display: inline; for {img, span, etc}; */
+}
+
+  #menuLine-mobile img {
+    position: fixed;
+    top: 21px;
+    right: 15px;
+    margin: 0 0 0 0;
+      -webkit-transform:scale(3.0);
+      -moz-transform:scale(3.0);
+      -ms-transform:scale(3.0);
+      transform:scale(3.0);
+  }
+
+#headerMenu {
+  display: none; /* hide the headerMenu navigation*/
+  position:fixed;
+   top: 21px;
+   left:0px;
+  width: 100%;
+  height: 20%;
+}
+  #headerMenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+    font-family: "Verdana";
+    /* font-size:; 1em = 12pt = 16px = 100% */
+    font-size: 12px;
+  }
+  #headerMenu li {
+      float: right;
+      background-color: #111;
+  }
+  #headerMenu li a {   
+      display: block;
+      height: 10px;
+      color: white;
+      text-align: center;
+      padding: 2px 5px 8px;
+      text-decoration: none;
+  }
+  /* Flag image */
+  #headerMenu li a img {
+    margin-bottom: 0px;
+    margin-right: 3px;
+  }
+  /* Magnif. image */
+  #headerMenu li button img {
+      margin-right: 1px;
+      margin-top: 1px;
+      text-align: center;
+  }
+  /* Change the link color-text to #CB2B2B (darkred) on hover */
+  #headerMenu li a:hover {
+      /*background-color: #444; */
+      color: #CB2B2B;
+  }
+  /*
+  *   The menu border-left end:
+  */
+  #end {
+      border-top: 10px solid black;
+      border-left: 10px solid white;
+      border-bottom: 10px solid black;
+      border-left: 10px solid white;
+      background-color: white;
+  }
+  /*  
+  *  Search input-field
+  */
+  #header-search, button {
+      border:1px solid #E8E8E8;
+      background-color:#E8E8E8;
+      height:30px;
+      padding: 0px;
+      color:#4a4a4a;
+      float: left;
+      font-size: 9px;
+      height: 16px;
+      margin-top: 2px;
+      margin-bottom: 2px;
+  }
+  #header-search {
+      -webkit-border-radius: 0 5px 5px 0;
+      -moz-border-radius: 0 5px 5px 0;
+      border-radius: 0 5px 5px 0;
+      margin-right: 5px;
+      width: 90px;
+  }
+  #headerMenu button {
+      -webkit-border-radius: 5px 0 0 5px;
+      -moz-border-radius: 5px 0 0 5px;
+      border-radius: 5px 0 0 5px;
+  }
+
+  /* HR - blackLine under banner */
+  #hr {
+    margin: -0.95% 0 0 0;
+  }
+
+/*
+*   Horizontal Menu center
+*/
+
+#menuLine {
+  display: none;
+  position:relative;
+   top: 8px;
+   left:0px;
+  width: 100%;
+  height: 20px;
+}
+  #menuLine ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #111;
+    font-family: "Verdana";
+    /* font-size:; 1em = 12pt = 16px = 100% */
+    font-size: 12px;
+  }
+  #menuLine li {
+    float: left;
+  }
+  #menuLine li a { 
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;  
+    padding: 2px 46px 5px 49px;
+  }
+  #menuLine li a:hover {
+    /* Change the link color-text to darkred on hover */
+    color: #CB2B2B;
+  }
+
+/*
+*     Cover-flow: More to come... see link in html-file
+*/
+#cover-flow1024 {
+  display: none;
+  margin-top: 10px;
+}
+#cover-flow648 {
+  position:relative;
+  margin-top: 10px;
+}
+  
+  #cover-flow hr {
+    margin: -0.5% 0 0 0;
+  }
+
+/*
+*     pageContainer - contains menuLodret and notes
+*/
+#pageContain {
+  display: block;
+}
+
+/*
+*     Vertical Menu left
+*/
+#menuLodret {
+  float: left;
+  width: 34%;
+   top: 0px;
+   left:0px;
+  padding: 0;
+  margin: -8px 0 0 0;
+  border: 0;
+}
+
+  #menuLodret ul {
+      border: 2px solid #111;
+      list-style-type: none;
+      padding: 3px 0 3px 0px;
+      width: 100%;
+      overflow: hidden;
+      text-decoration: none;
+      background-color: #111;
+      font-family: "Verdana";
+      font-size: 13px;
+  }
+
+  #menuLodret li a {
+      display: block;
+      color: white;
+      padding: 0px 0 0px 0;
+      text-decoration: none;
+  }
+
+  #menuLodret li a { 
+      display: block;
+      color: white;
+      margin: 0 0 0 2px;
+      text-align: left;  
+      padding: 4px 0px 4px 0px;
+  }
+
+  #menuLodret li a:hover {
+      color: #CB2B2B;
+      /*Make the arrow turn red along with the text on hover*/
+      /*content: url(arrowDownRed.png);*/
+  }
+
+  #menuLodret li a img {
+      padding: 0 6px 0 0;
+  }
+
+  #subMenuLodret ul {
+      border: 2px solid #FFF;
+      list-style-type: none;
+      padding: 5px 0 5px 5px;
+      width: 270px;
+      overflow: hidden;
+      text-decoration: none;
+      background-color: #FFF;
+      font-family: "Verdana";
+      font-size: 13px;
+  }
+
+  #subMenuLodret li a { 
+      display: block;
+      color: #CB2B2B;
+      margin: 0 0 0 2px;
+      text-align: left;  
+      padding: 2px 0px 5px 0px;
+  }
+
+  #subMenuLodret li a:hover {
+      color: black;
+      /*Make the arrow turn red along with the text on hover*/
+      /*content: url(arrowDownRed.png);*/
+  }
+
+#movie {
+  display: block;
+  float: left;
+  width: 61%;
+   top: 5px;
+   left:0px;
+  padding: 0;
+  margin: 14px 0 0 15px;
+  border: 2px solid #111;
+  font-family: "Verdana";
+  
+}
+
+ #movie h1 {
+    padding: 10px 0 10px 0;
+    margin: 3px 0 7px 5px;
+    border: 0;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  #movie h2 {
+    padding: 0 0 0 10px;
+    margin: 0;
+    border: 0;
+    color: #CB2B2B;
+    font-size: 14px;
+  }
+
+  #movie p {
+    display: block;
+    float: left;
+    width: 95%;
+    height: 250px;
+    padding: 5px 0 0 0;
+    margin: 3px 0 0 10px;
+    border: 0;
+    font-size: 10px;
+  }
+  
+  #moviePoster img {
+    display: none;
+    float: right;
+      width: 26%;
+      height: 100%;
+    padding: 35px 5px 0 5px;
+    margin: 0;
+    border: 0;
+  }
+
+  #movieTab {
+    position: absolute;
+    padding: 0;
+    margin: -31px 0 0 -42px;
+    border: 0;
+
+  }
+  #movieTab img {
+    position: relative;
+    display: block;
+    float: right;
+      width: 26%;
+      height: 100%;
+    padding: 25px 10px 0 10px;
+    margin: 0;
+    border: 0;
+    /* shrink element to 70% of original */
+    -webkit-transform:scale(1.6);
+    -moz-transform:scale(1.6);
+    -ms-transform:scale(1.6);
+    transform:scale(1.6);
+  }

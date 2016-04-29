@@ -1,0 +1,34 @@
+#pictures_static {
+  position:relative;
+  display: none;
+}
+#pictures_wordpress {
+  position:relative;
+  display: none;	
+}
+
+#text_static {
+	display: none;
+}
+#text_wordpress {
+	display: none;
+}
+
+#menuLine {
+  position:relative;
+  padding:0;
+}
+#menuLine ul {
+  list-style-type: none;
+}
+#menuLine li {
+  margin: -20px 0 0 0;
+}
+#menuLine li a{
+  position:relative;
+  text-decoration: none;
+}
+
+#menuLine li a:hover {
+  color: #CB2B2B;
+}

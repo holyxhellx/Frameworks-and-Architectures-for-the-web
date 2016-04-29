@@ -1,0 +1,101 @@
+<!doctype HTML PUBLIC "-//W3C//DTD HTML Strict//EN">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>Danish on a Sunday</title>
+      <!-- 
+      Layout helpers:
+      https://www.sitepoint.com/community/t/how-do-you-make-a-website-a-fixed-width/6885/16
+      Facebook generator:
+      https://developers.facebook.com/docs/plugins/like-button
+      -->
+      
+      <!-- Link CSS files: 
+      - https://developers.google.com/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries?hl=en
+      - between 0 px and 1024px width in the browser style.css is active,
+      - but greater or wider then 1024px, style_min1024px.css is active
+      -->
+      <link rel="stylesheet" href="index-style.css">
+
+      
+      <!-- Issue: firefox The character encoding of the HTML document was not declared."
+      -   Solution: <meta charset="utf-8"/>
+      -   source: https://github.com/webpack/webpack-dev-server/issues/1 -->
+      <meta charset="utf-8"/>
+
+      <!-- jQuery script -->
+      <!-- Get the JQuery library, Jquery 1 & 2 are the same except JQuery 2 doesn't support IE 6, 7, and 8 -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+      <script>
+      $(document).ready(function(){
+        $("#staticHide").click(function(){
+          $("#text_static").hide();
+          $("#pictures_static").hide();
+        });
+        $("#wordpressHide").click(function(){
+          $("#text_wordpress").hide();
+          $("#pictures_wordpress").hide();
+        });
+        $("#staticShow").click(function(){
+          $("#text_static").show();
+          $("#pictures_static").show();
+        });
+        $("#wordpressShow").click(function(){
+          $("#text_wordpress").show();
+          $("#pictures_wordpress").show();
+        });
+      });
+</script>
+</head>
+<body>
+  <h1 style="margin: 20px 0 10px 20px;"> Index: asbp@itu.dk </h1>
+  <div id="menuLine">
+    <ul class="menuLine">
+      <h3> Part A require static HTML and CSS files. These HTML and CSS files should be submitted as a ZIP file on LearnIT.</h3>
+      <li><a href="static-index/static-index.html">Assignment 2 part: A - HTML & CSS</a></li>
+      <p id="helper_text">Navigation helper:</p>
+      <li><button id="staticShow" type: "sumbit">Show</button><button id="staticHide" type: "sumbit">Hide</button></li>
+    </ul>
+  </div>
+  <div id="text_static">
+    <p style="margin: 0 0 0 20px;">
+      Nav-walk-through by color circles: </br> 
+      - Red provides access to MoviePage.html </br> 
+      - Blue provides access to index.html </br> 
+      - Green provides access to NavPage.html </br> 
+    </p>
+  </div>
+  </br>
+  <div id="pictures_static">
+    <img src="static-version-index.png" height="300" width="460"/>
+    <img src="static-version-movie.png" height="300" width="460"/>
+    <img src="static-version-nav.png" height="300" width="460"/>
+  </div>
+  <div id="menuLine">
+        <ul class="menuLine">
+        </br></br>
+          <h3>Part B requires you to create a WordPress theme based on your HTML and CSS files.</h3>
+          <li><a href="http://danishonasunday.deskwolf.net/home/">Assignment 2 part: B - Wordpress</a></li>
+          <p id="helper_text">Navigation helper:</p>
+          <li><button id="wordpressShow" type: "sumbit">Show</button><button id="wordpressHide" type: "sumbit">Hide</button></li>
+        </ul>
+  </div>
+  <div id="text_wordpress">
+    <p style="margin: 0 0 0 20px;">
+    Nav-walk-through by color circles: </br> 
+    - Red provides access to MoviePage.html (posts in wordpress) </br> 
+    - Blue provides access to index.html (pageIndex in wordpress)</br> 
+    - Green provides access to NavPage.html (pageNav in wordpress)</br> 
+    </p>
+  </div>
+  </br>
+    <div id="pictures_wordpress">
+    <img src="wordpress-version-index.png" height="300" width="280"/>
+    <img src="wordpress-version-nav.png" height="300" width="240"/>
+  </div>
+</body>
+</html>

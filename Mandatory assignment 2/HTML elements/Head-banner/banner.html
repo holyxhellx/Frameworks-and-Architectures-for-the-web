@@ -1,0 +1,190 @@
+<!doctype HTML PUBLIC "-//W3C//DTD HTML Strict//EN">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>Danish on a Sunday</title>
+      <!-- 
+      Layout helpers:
+      https://www.sitepoint.com/community/t/how-do-you-make-a-website-a-fixed-width/6885/16
+      Facebook generator:
+      https://developers.facebook.com/docs/plugins/like-button
+      -->
+      
+      <!-- Link CSS file -->
+      <link rel="stylesheet" href="style.css">
+      
+      <!-- Issue: firefox The character encoding of the HTML document was not declared."
+      -   Solution: <meta charset="utf-8"/>
+      -   source: https://github.com/webpack/webpack-dev-server/issues/1 -->
+      <meta charset="utf-8"/>
+
+      <!-- jQuery script -->
+      <script src="jquery.js"></script>
+</head>
+
+<body>
+<div id="container">
+  
+  <div id="header">
+    
+    <!-- Main backgroundbanner -->
+    <img src="header.png" height="100%" width="100%" >
+    
+    <!-- Logo (transparant) -->
+    <div id="logo">
+      <img src="logotop.gif" height="99px" width="258px" >
+    </div>
+    
+    <!-- header menu-bar-->
+    <div id="headerMenu">
+      <ul>
+          <li>
+            <button type="submit">
+              <img src="http://davidrhysthomas.co.uk/linked/search.png" height="10" width="10"/>
+            </button>
+            <input type="search" id="header-search" value="search"/>
+          </li>
+          <li><a href="langSet.asp">
+            <img src='flag.png' height="12" width="12">english</a>
+          </li>
+          <li><a href="contact.asp">kontakt</a></li>
+          <li><a href="presse.asp">presserum</a></li>
+          <li><a href="news.asp">nyhedsbreve</a></li>
+          <li><a href="default.asp">om dfi</a></li>
+          <li><div id="end"></div></li>
+      </ul>
+    </div>
+    <!-- end header menu-bar -->
+    <div id="social">
+      <ul>
+        <li>
+          <!-- twitter -->
+          <div id="twitter" style="z-index:3;">
+            <iframe 
+                data-screen-name="filminstituttet" 
+                src="http://platform.twitter.com/widgets/follow_button.b9740740e0bcf9b0657c5b11bd4388da.da.html#dnt=false&amp;id=twitter-widget-0&amp;lang=da&amp;screen_name=filminstituttet&amp;
+                
+                    show_count=false
+                
+                &amp;show_screen_name=true&amp;size=m&amp;time=1458209497920" 
+                title="Twitter Follow Button" 
+                style="position: static; visibility: visible; width: 213px; height: 20px;" 
+                class="twitter-follow-button twitter-follow-button-rendered" 
+                allowtransparency="true" 
+                scrolling="no" 
+                id="twitter-widget-0" 
+                frameborder="0">
+            </iframe>
+          </div>
+          <!-- end twitter-->
+        </li>
+        <li>
+          <!-- facebook -->
+          <div id="facebook" style="z-index:2;">
+            <div id="facebook-root">
+              <div style="position: absolute; height: 0px; width: 0px;">
+                <div>
+                  <iframe 
+                    src="http://staticxx.facebook.com/connect/xd_arbiter.php?version=42#channel=f2ae3d07a2249ee&amp;origin=http%3A%2F%2Fwww.dfi.dk" style="border: medium none;" 
+                    tabindex="-1" 
+                    title="Facebook Cross Domain Communication Frame" 
+                    aria-hidden="true" 
+                    id="fb_xdm_frame_http" 
+                    scrolling="no" 
+                    allowfullscreen="true" 
+                    allowtransparency="true" 
+                    name="fb_xdm_frame_http" 
+                    frameborder="0">
+                  </iframe>
+                  <iframe 
+                    src="https://staticxx.facebook.com/connect/xd_arbiter.php?version=42#channel=f2ae3d07a2249ee&amp;origin=http%3A%2F%2Fwww.dfi.dk" 
+                    style="border: medium none;" 
+                    tabindex="-1" 
+                    title="Facebook Cross Domain Communication Frame" 
+                    aria-hidden="true" 
+                    id="fb_xdm_frame_https" 
+                    scrolling="no" 
+                    allowfullscreen="true" 
+                    allowtransparency="true" 
+                    name="fb_xdm_frame_https" 
+                    frameborder="0">
+                  </iframe>
+                </div>
+              </div>
+            </div>
+            <div class="facebook-like">
+              <div  fb-iframe-plugin-query="action=like&amp;
+                                            app_id=&amp;
+                                            container_width=0&amp;
+                                            href=http%3A%2F%2Fwww.dfi.dk%2FFilmhuset%2FCinemateket%2FBilletter-og-program%2FSerie.aspx%3FserieID%3D11933&amp;
+                                            layout=button_count&amp;
+                                            locale=da_DK&amp;
+                                            sdk=joey&amp;
+                                            share=false&amp;
+                                            show_faces=false" 
+                    fb-xfbml-state="rendered" 
+                    class="fb-like fb_iframe_widget" 
+                    data-href="http://www.dfi.dk/Filmhuset/Cinemateket/Billetter-og-program/Serie.aspx?serieID=11933" 
+                    data-layout="button_count" 
+                    data-action="like" 
+                    data-show-faces="false" 
+                    data-share="false">
+                    <!-- This opens a popup "like" facebook-page -->
+                    <span style="vertical-align: bottom; width: 135px; height: 20px;">
+                      <iframe class="" 
+                        src="http://www.facebook.com/v2.0/plugins/like.php?action=like&amp;
+                        app_id=&amp;
+                        channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D42%23cb%3Df360b2e9a68c65%26domain%3Dwww.dfi.dk%26origin%3Dhttp%253A%252F%252Fwww.dfi.dk%252Ff2ae3d07a2249ee%26relation%3Dparent.parent&amp;
+                        container_width=0&amp;
+                        href=http%3A%2F%2Fwww.dfi.dk%2FFilmhuset%2FCinemateket%2FBilletter-og-program%2FSerie.aspx%3FserieID%3D11933&amp;
+                        layout=button_count&amp;
+                        locale=da_DK&amp;
+                        sdk=joey&amp;
+                        share=false&amp;
+                        show_faces=false" 
+                        style="border: medium none; visibility: visible; width: 135px; height: 20px;"
+                        title="fb:like Facebook Social Plugin" 
+                        scrolling="no" 
+                        allowfullscreen="true" 
+                        allowtransparency="true" 
+                        name="f224b1b9198f18e" 
+                        width="1000px" 
+                        frameborder="0" 
+                        height="1000px">
+                      </iframe>
+                    </span>
+              </div>
+            </div>
+          </div>
+          <!-- end facebook -->
+        </li>
+      </ul>
+    </div>
+    <!-- menu-main-hoizontal -->
+    <div id="menuLine">
+      <ul class="menuLine">
+        <li><a href="default.asp">Nyheder</a></li>
+        <!-- This link is colored to indicate where the user is at: At the functional website this will be a .active class in the css -->
+        <li><a style="color: darkred" href="banner.html">Cinemateket</a></li>
+        <li><a href="default.asp">Filmdatabase</a></li>
+        <li><a href="default.asp">Tal & fakta</a></li>
+        <li><a href="default.asp">Branche & støtte</a></li>
+        <li><a href="default.asp">Børn & unge</a></li>
+      </ul>
+    </div>
+    <!-- end menu-main-hoizontal -->
+    <p>
+      <br>
+      <u>TODO:</u><br>
+      Logo transparent in head-banner - improved version <br>
+      The right type of font <br>
+      Remove twitter counter box <br>
+      Remove facebook counter box <br>
+    </p>
+  </div>
+  <!-- end header -->
+</div>
+<!-- end container -->
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!doctype HTML PUBLIC "-//W3C//DTD HTML Strict//EN">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>Danish on a Sunday</title>
+      <!-- 
+      Layout helpers:
+      https://www.sitepoint.com/community/t/how-do-you-make-a-website-a-fixed-width/6885/16
+      Facebook generator:
+      https://developers.facebook.com/docs/plugins/like-button
+      -->
+      
+      <!-- Link CSS files: 
+      - https://developers.google.com/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries?hl=en
+      - between 0 px and 1024px width in the browser style.css is active,
+      - but greater or wider then 1024px, style_min1024px.css is active
+      -->
+      <link rel="stylesheet" media="(min-width: 648px)" href="style.css">
+      <link rel="stylesheet" media="(min-width: 1024px)" href="style_min1024px.css">
+      <link rel="stylesheet" media="(max-width: 647px)" href="style_max648px.css">
+      
+      <!-- Issue: firefox The character encoding of the HTML document was not declared."
+      -   Solution: <meta charset="utf-8"/>
+      -   source: https://github.com/webpack/webpack-dev-server/issues/1 -->
+      <meta charset="utf-8"/>
+
+      <!-- jQuery script -->
+      <!-- Get the JQuery library, Jquery 1 & 2 are the same except JQuery 2 doesn't support IE 6, 7, and 8 -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+</head>
+<body>
+
+<div id="container">
+  
+  <div id="page">
+
+    <!-- Main backgroundbanner -->
+    <div id="banner">
+      <img src="../image/header.jpg" height="100%" width="1024px" >
+    </div>
+    <div id="hr">
+      <hr width="100%" style="border: 1px solid #111; margin: 0px;" color="#000000" size="3">
+    </div>
+    <!-- Logo (transparant) 99px x 258px -->
+    <div id="logo">
+      <img src="../image/logo.png" height="99px" width="258px" >
+    </div>
+    
+    <!-- header menu-bar Mobile Verison -->
+    <div id="menuLine-mobile">
+      <img src="../image/menuHeaderMobileVersion.png" height="10" width="10" align="right" />
+      <!-- Here Jquery will help with hide/show list on "click" action, and perform a bubble grafisk for the menu to appere.. (not implementet, it is only a img for now) -->
+    </div>
+
+    <!-- header menu-bar-->
+    <div id="headerMenu">
+      <ul>
+          <li>
+            <button type="submit">
+              <img src="http://davidrhysthomas.co.uk/linked/search.png" height="10" width="10"/>
+            </button>
+            <input type="search" id="header-search" value="search"/>
+          </li>
+          <li><a href="langSet.asp">
+            <img src='../image/flag.png' height="12" width="12">english</a>
+          </li>
+          <li><a href="contact.asp">kontakt</a></li>
+          <li><a href="presse.asp">presserum</a></li>
+          <li><a href="news.asp">nyhedsbreve</a></li>
+          <li><a href="default.asp">om dfi</a></li>
+          <li><div id="end"></div></li>
+      </ul>
+    </div>
+    <!-- end header menu-bar -->
+    <div id="social">
+      <ul>
+        <li>
+          <!-- twitter -->
+          <div id="twitter" style="z-index:3;">
+            <iframe 
+                data-screen-name="filminstituttet" 
+                src="http://platform.twitter.com/widgets/follow_button.b9740740e0bcf9b0657c5b11bd4388da.da.html#dnt=false&amp;id=twitter-widget-0&amp;lang=da&amp;screen_name=filminstituttet&amp;
+                
+                    show_count=false
+                
+                &amp;show_screen_name=true&amp;size=m&amp;time=1458209497920" 
+                title="Twitter Follow Button" 
+                style="position: static; visibility: visible; width: 213px; height: 20px;" 
+                class="twitter-follow-button twitter-follow-button-rendered" 
+                allowtransparency="true" 
+                scrolling="no" 
+                id="twitter-widget-0" 
+                frameborder="0">
+            </iframe>
+          </div>
+          <!-- end twitter-->
+        </li>
+        <li>
+          <!-- facebook -->
+          <div id="facebook" style="z-index:2;">
+            <div id="facebook-root">
+              <div style="position: absolute; height: 0px; width: 0px;">
+                <div>
+                  <iframe 
+                    src="http://staticxx.facebook.com/connect/xd_arbiter.php?version=42#channel=f2ae3d07a2249ee&amp;origin=http%3A%2F%2Fwww.dfi.dk" style="border: medium none;" 
+                    tabindex="-1" 
+                    title="Facebook Cross Domain Communication Frame" 
+                    aria-hidden="true" 
+                    id="fb_xdm_frame_http" 
+                    scrolling="no" 
+                    allowfullscreen="true" 
+                    allowtransparency="true" 
+                    name="fb_xdm_frame_http" 
+                    frameborder="0">
+                  </iframe>
+                  <iframe 
+                    src="https://staticxx.facebook.com/connect/xd_arbiter.php?version=42#channel=f2ae3d07a2249ee&amp;origin=http%3A%2F%2Fwww.dfi.dk" 
+                    style="border: medium none;" 
+                    tabindex="-1" 
+                    title="Facebook Cross Domain Communication Frame" 
+                    aria-hidden="true" 
+                    id="fb_xdm_frame_https" 
+                    scrolling="no" 
+                    allowfullscreen="true" 
+                    allowtransparency="true" 
+                    name="fb_xdm_frame_https" 
+                    frameborder="0">
+                  </iframe>
+                </div>
+              </div>
+            </div>
+            <div class="facebook-like">
+              <div  fb-iframe-plugin-query="action=like&amp;
+                                            app_id=&amp;
+                                            container_width=0&amp;
+                                            href=http%3A%2F%2Fwww.dfi.dk%2FFilmhuset%2FCinemateket%2FBilletter-og-program%2FSerie.aspx%3FserieID%3D11933&amp;
+                                            layout=button_count&amp;
+                                            locale=da_DK&amp;
+                                            sdk=joey&amp;
+                                            share=false&amp;
+                                            show_faces=false" 
+                    fb-xfbml-state="rendered" 
+                    class="fb-like fb_iframe_widget" 
+                    data-href="http://www.dfi.dk/Filmhuset/Cinemateket/Billetter-og-program/Serie.aspx?serieID=11933" 
+                    data-layout="button_count" 
+                    data-action="like" 
+                    data-show-faces="false" 
+                    data-share="false">
+                    <!-- This opens a popup "like" facebook-page -->
+                    <span style="vertical-align: bottom; width: 135px; height: 20px;">
+                      <iframe class="" 
+                        src="http://www.facebook.com/v2.0/plugins/like.php?action=like&amp;
+                        app_id=&amp;
+                        channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D42%23cb%3Df360b2e9a68c65%26domain%3Dwww.dfi.dk%26origin%3Dhttp%253A%252F%252Fwww.dfi.dk%252Ff2ae3d07a2249ee%26relation%3Dparent.parent&amp;
+                        container_width=0&amp;
+                        href=http%3A%2F%2Fwww.dfi.dk%2FFilmhuset%2FCinemateket%2FBilletter-og-program%2FSerie.aspx%3FserieID%3D11933&amp;
+                        layout=button_count&amp;
+                        locale=da_DK&amp;
+                        sdk=joey&amp;
+                        share=false&amp;
+                        show_faces=false" 
+                        style="border: medium none; visibility: visible; width: 135px; height: 20px;"
+                        title="fb:like Facebook Social Plugin" 
+                        scrolling="no" 
+                        allowfullscreen="true" 
+                        allowtransparency="true" 
+                        name="f224b1b9198f18e" 
+                        width="1000px" 
+                        frameborder="0" 
+                        height="1000px">
+                      </iframe>
+                    </span>
+              </div>
+            </div>
+          </div>
+          <!-- end facebook -->
+        </li>
+      </ul>
+    </div>
+    <!-- menu-main-hoizontal -->
+    <div id="menuLine">
+      <ul class="menuLine">
+        <li><a href="default.asp">Nyheder</a></li>
+        <!-- This link is colored to indicate where the user is at: At the functional website this will be a .active class in the css - Jquery script will be used to select the coloring of current link shown in futher development -->
+        <li><a style="color: #CB2B2B" href="../index.html">Cinemateket</a></li>
+        <li><a href="default.asp">Filmdatabase</a></li>
+        <li><a href="default.asp">Tal & fakta</a></li>
+        <li><a href="default.asp">Branche & støtte</a></li>
+        <li><a href="default.asp">Børn & unge</a></li>
+      </ul>
+    </div>
+    <!-- end menu-main-hoizontal -->
+    <!-- Cover-flow - jQuery: http://coverflowjs.github.io/coverflow/ -->
+    <div id="cover-flow1024">
+      <img src="../image/Cover-flow-spe.png" height="390px" width="100%" style="padding-top: 10px;">
+       <hr width="100%" style="border: 1px solid #111; margin: 0 0 10px 0" color="#000000" size="3">
+    </div>
+     <div id="cover-flow648">
+      <img src="../image/Cover-flow-spe2.png" height="390px" width="100%" style="padding-top: 10px;">
+       <hr width="100%" style="border: 1px solid #111; margin: 0 0 10px 0" color="#000000" size="3">
+    </div>
+    <!-- end Cover-flow -->
+    <!-- vertical menu -->
+      <div id="menuLodret">
+        <ul>
+          <!-- The possibility of opening both the dropdown and the url, text/img has diff. hover settings-->
+          <li><a href="../index.html">Program<img src="
+            ../image/arrowDown.png" height="15" width="15" align="right" 
+            onmouseover="this.src='../image/arrowDownRed.png';" 
+            onmouseout="this.src='../image/arrowDown.png';"/></a>
+            <div id="subMenuLodret">
+              <ul>
+                <li><a href="default.asp"> - Find film</a></li>
+                <li><a href="default.asp"> - Bestil/køb billet</a></li>
+                <li><a href="default.asp"> - Trykt program</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="../NavPage/NavPage.html">Information<img src="
+            ../image/arrowDown.png" height="15" width="15" align="right" 
+            onmouseover="this.src='../image/arrowDownRed.png';" 
+            onmouseout="this.src='../image/arrowDown.png';"/></a></li>
+          <li><hr width="100%" style="border: 1px solid #FFF; padding-top: -5px 0 0 0" color="#FFFFFF" size="3"></li>
+          <li><a href="default.asp">Medlemmer<img src="
+            ../image/arrowDown.png" height="15" width="15" align="right" 
+            onmouseover="this.src='../image/arrowDownRed.png';" 
+            onmouseout="this.src='../image/arrowDown.png';"/></a></li>
+            <!-- Here below this root/link there will be another set of subMenuLodret links -->
+          <li><hr width="100%" style="border: 1px solid #FFF" color="#FFFFFF" size="3"></li>  
+          <li><a href="default.asp">Brunch-bio</a></li>
+          <li><hr width="100%" style="border: 1px solid #FFF" color="#FFFFFF" size="3"></li>
+          <li><a href="default.asp">Walk-in-bio</a></li>
+          <li><a href="default.asp">Faste filmserier</a></li>
+          <li><hr width="100%" style="border: 1px solid #FFF" color="#FFFFFF" size="3"></li>
+          <li><a href="default.asp">Musikfilm Festival 2016</a></li>
+        </ul>
+        <!-- end vertical menu -->
+      </div>
+      <!-- movie frames --> 
+      <div id="movie">     
+        <h1>Skammerens datter</h1>
+        <h2>Resumé</h2>
+        <p>Dina, Skammerens Datter, har til sin store fortrydelse arvet sin mors overnaturlige evner. Hun kan se direkte ind i andre menneskers sjæl og få dem til at skamme sig over alle de dårlige ting, de har gjort. Når den retmæssige arving til Fyrstetronen uretmæssigt anklages for en række horrible mord, lokkes Dinas mor til Dunark under falske forudsætninger, for at få ham til at bekende. Men da hun nægter at misbruge sine evner og få en uskyldig dømt, bliver hun taget til fange. Det er nu op til Dina at finde sandheden om mordene og snart hvirvles hun ind i et blodigt magtopgør med livet som indsats. I en semi-realistisk, middelalderlig, fantasy verden, kastes Dina og hendes familie ud i et hæsblæsende eventyr med drager og magi i forsøget på at indsætte den retmæssige arving til fyrstedømmet i Dunark på tronen. </p>
+      </div>
+      <div id="movieTab">
+        <img src="../image/movieTab.png"/>
+      </div>
+      <div id="moviePoster">
+        <img src="../image/skammerens datter.jpg"/>
+      </div>
+    <!-- end movie frames -->
+  </div>
+  <!-- end header -->
+</div>
+<!-- end container -->
+
+<!-- jQuery script -->
+<script>
+// show/hide the top-headerMenu when scrolling down
+$(window).bind('scroll', function() {
+  if ($(window).width() > 650 && $(window).width() < 1020) {
+    if ($(window).scrollTop() > 10) {
+      $('#headerMenu').hide();
+    }
+  }
+});
+$(window).bind('scroll', function() {
+  if ($(window).width() > 650 && $(window).width() < 1020) {
+       if ($(window).scrollTop() < 10) {
+      $('#headerMenu').show();
+    }
+  }
+});
+$(window).bind(function() {
+  if ($(window).width() < 650) {
+    $('#headerMenu').hide();
+  }
+});
+$(window).bind(function() {
+  if ($(window).width() > 1020) {
+    $('#headerMenu').show();
+  }
+});
+</script>
+</body>
+</html>
