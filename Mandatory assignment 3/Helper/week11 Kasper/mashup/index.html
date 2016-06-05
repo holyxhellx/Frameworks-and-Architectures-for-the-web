@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="">
+	<!--<script src="flickrjs.js"></script>-->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// Check if geolocation exists in then browser
+			if(navigator.geolocation){
+				// Get the current position from HTML5 Geolocation
+				navigator.geolocation.getCurrentPosition(function(position){
+					var latitude = position.coords.latitude;
+					var longitude = position.coords.longitude;
+
+					console.log("LAT"+latitude);
+					console.log("LONG"+longitude);
+
+					// GET request to the API
+					$.get("https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=a4cfae60981b2822b7fc17de196abbd9&lat="+latitude+"&lon="+longitude+"&radius=5&per_page=200&format=json&nojsoncallback=1", null, null, null).done(function(data){
+						// This code is executed when we get a response from the API
+
+						var arrPhotos = data.photos.photo;
+						console.log(data);
+
+						arrPhotos.forEach( function(photo, index) {
+							// Outputting photos in the console
+							console.log(photo);
+							// Appending images to the photos list
+							$("#photos-list").append("<li style='margin: 3px 3px 3px 0; padding: 1px; float: left; list-style: none;'><img style='width: 100px; height: 100px;' src='https://farm"+photo.farm+".staticflickr.com/"+photo.server+"/"+photo.id+"_"+photo.secret+".jpg' /></li>")
+							});
+						});
+			
+					});
+				}
+
+				$( "#photos-list" ).sortable();
+    			$( "#photos-list" ).disableSelection();
+			})
+
+
+	</script>
+</head>
+<body>
+	<ul id="photos-list">
+		<!-- RENDER PHOTOS HERE -->
+	</ul>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype HTML PUBLIC "-//W3C//DTD HTML Strict//EN">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Photo-Puzzle</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+		<!-- jQuery Reference -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"/></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"/></script>
+		
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	
+		<!-- Style Reference-->
+		<link rel="stylesheet" href="CSS/style.css">
+
+		<!-- JavaScript Files References (path ~/Js)-->
+		<script src="JS/APICall.js"></script>
+
+	</head>
+	<body>
+		<!-- Main Container -->
+		<div id="main">
+			<!-- Header Section-->
+			<div id="header">
+				<div id="nav">
+					<div id="headline">Photo Flickr Puzzle</div>
+					<form input="searchForm" id="searchForm" action="">
+						<input type="text" id="searchPhrase" value="Search">
+					</form>
+				</div>
+			</div> 
+			<!-- End of Header Section-->
+
+			<!-- Head picture Section-->
+			<div id="carouselContainer">
+				<div id="myCarousel">
+					<img src="img/mainImage.png" id="image"/>
+					<div id="next"><img  id="nextImage" src="img/right.png" class="right"></div>
+					<div id="previous"><img id="prevImage"src="img/left.png" class="left"></div>
+				</div>
+			</div> 
+			<!-- End of Head picture Section-->
+
+			<!-- Photo Body Container -->
+			<div id="socialContainer">
+				<div id="social">
+					<h4 id="point">Score: --- </h4>
+					<h8 id="Lat"></h8>
+					<h8 id="Lng"></h8>
+					<div><img class="socialIcon" src="img/fb.png"></div>
+					<div><img class="socialIcon" src="img/gp.png"></div>
+					<div><img class="socialIcon" src="img/tw.png"></div>
+				</div>
+			</div>
+			<div id="photoContainer">
+				
+				<div id="loading-bar">
+					<img  id="loading-bar-jpg" src="img/loading-bar.png">
+				</div>
+			
+				<div class="photoBody">
+					<ul id="photos-list">
+						<!-- RENDER PHOTOS HERE -->
+					</ul>
+				</div> 
+				<!-- End of PhotoBody-->
+			</div>
+			<div id="paginationContainer">
+				<div id="pagination">
+					<ul id="pageLink">
+
+					</ul>
+				</div>
+			</div>
+		</div> <!-- End of Main Container-->
+	</body>
+</html>

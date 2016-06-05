@@ -1,0 +1,79 @@
+<!doctype HTML PUBLIC "-//W3C//DTD HTML Strict//EN">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Photo-Puzzle</title>
+		
+		<!-- Style Reference-->
+		<link rel="stylesheet" href="CSS/style.css" />
+		<!-- jQuery Reference -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">
+		</script>
+
+		<script>
+		$(document).ready(function(){
+			$( "#thumbnail" ).sortable();
+			$( "#thumbnail" ).disableSelection();
+		}	
+		</script>
+
+	</head>
+	<body>
+		<!-- Main Container -->
+		<div id="main">
+			<!-- Header Section-->
+			<div id="header">
+				<div id="nav">
+					<div id="headline">Photo Flickr Puzzle</div>
+					<form input="searchForm" id="searchForm" action="">
+						<input type="text" id="searchPhrase" value="">
+						<input type="submit" id="submitbtn" value="Search">
+					</form>
+				</div>
+			</div> 
+			<!-- End of Header Section-->
+
+			<!-- Head picture Section-->
+			<div id="carouselContainer">
+				<div id="myCarousel">
+					<img src="" id="image">
+					<div id="next"><img  id="nextImage" src="img/right.png" class="right"></div>
+					<div id="previous"><img id="prevImage"src="img/left.png" class="left"></div>
+				</div>
+			</div> 
+			<!-- End of Head picture Section-->
+
+			<!-- Photo Body Container -->
+			<div id="socialContainer">
+				<div id="social">
+					<h4 id="photographer">Photographer: --- </h4>
+					<span><img class="socialIcon" src="img/fb.png"></span>
+					<span><img class="socialIcon" src="img/gp.png"></span>
+					<span><img class="socialIcon" src="img/tw.png"></span>
+				</div>
+			</div>
+			<div id="photoContainer">
+				<div class="photoBody">
+					<div id="thumbnail">
+
+					</div>
+				</div> 
+				<!-- End of PhotoBody-->
+			</div>
+			<div id="paginationContainer">
+				<div id="pagination">
+					<ul id="pageLink">
+
+					</ul>
+				</div>
+			</div>
+			<!-- JavaScript Files References (path ~/Js)-->
+
+		</div> <!-- End of Main Container-->
+
+		<!-- This are scripts divided into seperate script functions -->
+		<script src="Js/APICall.js"></script>
+		<script src="Js/UI.js"></script>
+		<script src="Js/app.js"></script>
+	</body>
+</html>

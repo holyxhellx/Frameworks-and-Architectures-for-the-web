@@ -1,0 +1,117 @@
+<!doctype HTML PUBLIC "-//W3C//DTD HTML Strict//EN">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Photo-Puzzle</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+		<!-- jQuery Reference -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"/></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"/></script>
+		
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	
+		<!-- Style Reference-->
+		<link rel="stylesheet" href="CSS/style.css">
+
+		<!-- JavaScript Files References (path ~/Js)-->
+		<script src="JS/APICall.js"></script>
+		<script src="JS/SafariFirefoxAPICall.js"></script>
+		<script src="JS/ChromeAPICall.js"></script>
+		<script src="JS/puzzle.js"></script>
+		<script src="JS/counter.js"></script>
+		<script src="JS/fb.js"></script>
+	</head>
+	<body onload="init();">
+		<!-- Facebook API script -->
+		<script>
+		  window.fbAsyncInit = function() {
+		    FB.init({
+		      appId      : '961086140676860',
+		      xfbml      : true,
+		      version    : 'v2.6'
+		    });
+		  };
+
+		  (function(d, s, id){
+		     var js, fjs = d.getElementsByTagName(s)[0];
+		     if (d.getElementById(id)) {return;}
+		     js = d.createElement(s); js.id = id;
+		     js.src = "//connect.facebook.net/en_US/sdk.js";
+		     fjs.parentNode.insertBefore(js, fjs);
+		   }(document, 'script', 'facebook-jssdk'));
+		</script>
+		<!-- END Facebook API script -->
+		<!-- Facebook Like -->
+		<divclass="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
+		<!-- END Facebook Like -->
+
+		<!-- Main Container -->
+		<div id="main">
+			<!-- Header Section-->
+			<div id="header">
+				<div id="nav">
+					<div id="headline">Photo Flickr Puzzle</div>
+					<button type="button" id="buttonE" onClick="setEasy()" >Easy</button> 
+					<button type="button" id="buttonM" onClick="setMed()" >Medium</button>
+			 		<button type="button" id="buttonH" onClick="setHard()" >Hard</button>
+					<form input="searchForm" id="searchForm" action="">
+						<input type="text" id="searchPhrase" value="Search">
+					</form>
+				</div>
+			</div> 
+			<!-- End of Header Section-->
+
+			<!-- Head picture Section-->
+			<div id="mainContainer">
+				<div id="puzzle" height="400">
+					<!-- Will show the puzzleGame in full screen mode -->
+					<canvas id="canvas"></canvas>
+					<!-- Will only show pictures in mobile screen mode on click -->
+					<img src="IMG/mainImage.jpg" id="image"/> 
+				</div>
+			</div> 
+			<!-- End of Head picture Section-->
+
+			<!-- Photo Body Container (Point & social) -->
+			<div id="socialContainer">
+				<div id="social">
+					<div><img class="socialIcon" src="IMG/fb.jpg" onClick="fb_publish()"></div>
+					<div><img class="socialIcon" src="IMG/gp.jpg"></div>
+					<div><img class="socialIcon" src="IMG/tw.jpg"></div>
+					<h4 id="point">Score: --- </h4> </br>
+					<h4 id="puzzlesDone">Puzzles: --- </h4> </br>
+					
+					<!-- Hidden element in browser: future development -->
+					<a href="#" id="showval">Current time</a>
+					<h8 id="Lat"></h8>
+					<h8 id="Lng"></h8>
+
+				</div>
+			</div>
+			<!-- END Photo Body Container -->
+
+			<!-- PhotoContainer Flickr API -->
+			<div id="photoContainer">
+				<div id="loading-bar">
+					<img  id="loading-bar-jpg" src="IMG/loading-bar.jpg">
+				</div>
+			
+				<div class="photoBody">
+					<ul id="photos-list">
+						<!-- RENDER PHOTOS HERE -->
+					</ul>
+				</div> 
+			</div>
+			<!-- End of PhotoContainer -->
+
+			<!-- Google Map: API view-->
+			<div id="paginationContainer">
+				<div id="pagination">
+				</div>
+			</div>
+		</div> 
+		<!-- End of Main Container-->
+	</body>
+</html>
